@@ -10,7 +10,7 @@ Still laying out foundation for api so that the client can easily be modified. T
 
 Following information came from [this wiki](https://kakegurui.fandom.com/wiki/Indian_Poker)
 
-Each group of 4 plays with a 40 card deck with all the jokers and face cards removed. The dealer will pass out the first card, which players may look at. A second card will then be dealt, which the player may not look at, and has to place on their forehead. The strongest match is a pair, where the numbers match, the next strongest is a suit, which is self-explanatory, and the weakest is a pig, where neither number nor suit match. If multiple players have the same hand then the largest number wins. When placing bets, players can either call, raise or fold.
+Each group of 4 plays with a 40 card deck with all the jokers and face cards removed. The dealer will pass out the first card, which players may look at. A second card will then be dealt, which the player may not look at, and has to place on their forehead. The strongest match is a pair, where the numbers match, the next strongest is a suit, which is self-explanatory, and the weakest is a pig, where neither number nor suit match. If multiple players have the same hand then the largest number wins. When placing bets players can either call, raise or fold.
 
 <details>
         <summary>Fake game</summary>
