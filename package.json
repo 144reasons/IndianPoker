@@ -14,7 +14,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon  ./server/index.js"
+    "server": "nodemon  ./bin/www"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,8 @@
     "url": "https://github.com/somerandomcloud/IndianPoker/issues"
   },
   "homepage": "https://github.com/somerandomcloud/IndianPoker#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "eslint": "^8.5.0"
+  }
 }
