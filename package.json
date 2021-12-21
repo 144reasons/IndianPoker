@@ -8,13 +8,14 @@
     "express": "~4.16.1",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.15",
-    "random-words": "^1.1.1"
+    "random-words": "^1.1.1",
+    "socket.io": "^4.4.0"
   },
   "name": "indianpoker",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon  ./bin/www"
+    "server": "nodemon  ./bin/www --ignore './data/*.json'"
   },
   "repository": {
     "type": "git",
