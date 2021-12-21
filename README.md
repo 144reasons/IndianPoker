@@ -34,5 +34,3 @@ Each group of 4 plays with a 40 card deck with all the jokers and face cards rem
         P1 had a pig, so they loose
         P2 had a suit, so they win
 </details> 
-
-Enjoy!
