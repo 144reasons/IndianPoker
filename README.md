@@ -2,9 +2,9 @@
 
 Just a small project to replicate the gambling game called Indian Poker. I learnt of the existence of this game from the anime adaptation of [Kakegurui - Compulsive gambler](https://en.wikipedia.org/wiki/Kakegurui_%E2%80%93_Compulsive_Gambler)
 
-## Progress
+## Info
 
-Still laying out foundation for api so that the client can easily be modified. The plan is that the only kind of game deciding things that happen on the users pc is to check for user inputs.
+I lack a foundation with this project and how its updating is progressing. You might find some inconsistencies while looking through this repo!
 
 ## How to play actual Indian Poker
 

@@ -3,6 +3,9 @@ const readline = require('readline'),
 
 const { exec } = require('child_process');
 
+rl.setPrompt('AutoGit> ');
+rl.prompt();
+
 rl.on('line', function(line) {
 
 	const args = line.trim().split(/ +/);
@@ -15,7 +18,14 @@ rl.on('line', function(line) {
 
 		break;
 	case 'fullpush':
+		if(!args) return console.log('No commit message defined');
+
 		exec(`git add . && git commit -m "${args}" && git push`, (error, stdout, stderr)=>{if(error) {console.log(`error:${error.message}`);return;}if(stderr) {console.log(`stderr:${stderr}`);return;}console.log(`stdout:${stdout}`);});
+		break;
+	case 'exit':
+		console.log('Exiting program...');
+		process.exit(0);
+
 		break;
 	default:
 		console.log(`${command} is not a command`);
@@ -24,6 +34,6 @@ rl.on('line', function(line) {
 	rl.prompt();
 
 }).on('close', function() {
-	console.log('Exiting program...');
+	console.log('exit\nExiting program...');
 	process.exit(0);
 });
