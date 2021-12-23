@@ -5,6 +5,8 @@ module.exports = {
 	once: false,
 	async execute(io, socket) {
 
+		console.log(`${socket.id}`);
+
 		/* Socket event handler start */
 		const eventFiles = fs
 			.readdirSync(`${__dirname}/../socketevents`)
