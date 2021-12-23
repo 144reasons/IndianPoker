@@ -40,7 +40,7 @@ rl.on('line', function(line) {
 	}
 	rl.prompt();
 }).on('close', function() {
-	console.log('Exiting program...');
+	console.log('exit\nExiting program...');
 	process.exit(0);
 });
 
