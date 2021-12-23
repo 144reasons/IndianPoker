@@ -9,7 +9,7 @@
     "socket.io": "^4.4.0"
   },
   "name": "indianpoker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "server": "nodemon  ./index.js --ignore './data/*.json'"

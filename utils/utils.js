@@ -22,7 +22,13 @@ charactersLength));
 	return result;
 }
 
+function isObject(obj)
+{
+    return obj !== undefined && obj !== null && obj.constructor == Object;
+}
+
 module.exports = {
 	pswd,
 	makeid,
+	isObject,
 };
