@@ -4,7 +4,7 @@ Just a small project to replicate the gambling game called Indian Poker. I learn
 
 ## Info
 
-I lack a foundation with this project and how its updating is progressing. You might find some inconsistencies while looking through this repo!
+Im still finding a way on how to maintain a repo and its docs, please try to assist me if possible!
 
 ## How to play actual Indian Poker
 
@@ -33,13 +33,4 @@ Each group of 4 plays with a 40 card deck with all the jokers and face cards rem
         P2 had a 4-S and a 8-S
         P1 had a pig, so they loose
         P2 had a suit, so they win
-</details> 
-
-
-## Epic details of what I am doing in this repo
-
-### ⚠️ Very passive aggressive text in this section of the repo! You have been warned ⚠️
-
-I am making a socket.io backend server so that people can create their own client to their likings, as long as it uses socket.io and not some randon websocket application. Think thats unfair? Think using socket.io will limit users to creating their own client in javascript? First of all, shit yourself. Second, read [here](https://socket.io/docs/v4/). There is support for socket.io on "mainstream" coding languages (fuck go).
-
-I will be using the lovely little features called [Rooms](https://socket.io/docs/v4/rooms/) provided by socket.io to create the rooms. Will it break? Maybe or maybe not, will burn that bridge once I get there. 
+</details>

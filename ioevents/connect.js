@@ -18,7 +18,7 @@ module.exports = {
 				socket.once(event.name, (arg) => event.execute(db, io, socket, arg));
 			}
 			else {
-				socket.on(event.name, (arg) => event.execute(io, socket, arg));
+				socket.on(event.name, (arg) => event.execute(db, io, socket, arg));
 			}
 		}
 		/* Socket event handler end */

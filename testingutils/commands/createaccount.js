@@ -9,6 +9,6 @@ module.exports = {
 			password: args[1],
 		};
 
-		socket.emit('register', req);
+		socket.emit('createaccount', req);
 	},
 };

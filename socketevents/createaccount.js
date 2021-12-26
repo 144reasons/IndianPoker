@@ -1,7 +1,5 @@
 const utils = require('../utils/utils');
 
-// Broken for some dumb reason
-
 module.exports = {
 	name: 'createaccount',
 	once: false,
@@ -10,9 +8,7 @@ module.exports = {
 
 		if(!arg.username || !arg.password) return socket.emit('update', { code: 'MISSINGINFO' });
 
-		if(db.fetch(arg.username)) return socket.emit('update', { code: 'ALREADYEXISTS' });
-
-		console.log('balls');
+		if(db.has(arg.username)) return socket.emit('update', { code: 'ALREADYEXISTS' });
 
 		db.set(arg.username, arg.password);
 	},
