@@ -3,7 +3,7 @@ const fs = require('fs');
 module.exports = {
 	name: 'connect',
 	once: false,
-	async execute(io, socket) {
+	async execute(db, io, socket) {
 
 		console.log(`${socket.id}`);
 
@@ -15,7 +15,7 @@ module.exports = {
 		for (const file of eventFiles) {
 			const event = require(`${__dirname}/../socketevents/${file}`);
 			if (event.once) {
-				socket.once(event.name, (arg) => event.execute(io, socket, arg));
+				socket.once(event.name, (arg) => event.execute(db, io, socket, arg));
 			}
 			else {
 				socket.on(event.name, (arg) => event.execute(io, socket, arg));

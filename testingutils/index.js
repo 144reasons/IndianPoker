@@ -3,6 +3,7 @@ const readline = require('readline'),
 
 const { io } = require('socket.io-client');
 const socket = io('ws://localhost:3000');
+const fs = require('fs');
 
 rl.setPrompt('IP> ');
 rl.prompt();
@@ -12,31 +13,17 @@ rl.on('line', function(line) {
 
 	const command = args.shift().toLowerCase();
 
-	switch(command) {
-	case 'hello':
-		console.log('world!');
-		break;
-	case 'myrooms':
-		socket.emit('myrooms');
-		break;
-	case 'creategame':
-		console.log('Contacting given socket with either given or default values');
+	const commandsFile = fs
+		.readdirSync(__dirname + '/./commands')
+		.filter((file) => file.endsWith('.js'));
 
-		const req = {
-			chips: args[0] || 100,
-			fee: args[1] || 1,
-		};
+	for (const file of commandsFile) {
+		const commandfile = require(`./commands/${file}`);
 
-		socket.emit('creategame', req);
+		if(command === commandfile.name) {
+			commandfile.execute(socket, args);
+		}
 
-		break;
-	case 'args':
-		console.log(args);
-
-		break;
-	default:
-		console.log(`${command} is not a command`);
-		break;
 	}
 	rl.prompt();
 }).on('close', function() {
@@ -51,3 +38,5 @@ socket.on('yourrooms', (...args) => {
 socket.on('update', (...args) => {
 	console.log(args);
 });
+
+socket.on();

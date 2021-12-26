@@ -4,7 +4,7 @@ const utils = require('../utils/utils');
 module.exports = {
 	name: 'creategame',
 	once: false,
-	async execute(io, socket, arg) {
+	async execute(db, io, socket, arg) {
 
 		console.log(arg);
 
