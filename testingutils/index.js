@@ -32,11 +32,15 @@ rl.on('line', function(line) {
 });
 
 socket.on('yourrooms', (...args) => {
+	console.log('yourrooms event triggered\n');
 	console.log(args);
+	console.log('IP> ');
 });
 
 socket.on('update', (...args) => {
+	console.log('update event triggered');
 	console.log(args);
+	console.log('IP> ');
 });
 
 socket.on();
