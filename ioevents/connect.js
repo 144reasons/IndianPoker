@@ -23,7 +23,5 @@ module.exports = {
 		}
 		/* Socket event handler end */
 
-		//
-
 	},
 };

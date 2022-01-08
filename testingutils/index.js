@@ -23,6 +23,9 @@ rl.on('line', function(line) {
 		if(command === commandfile.name) {
 			commandfile.execute(socket, args);
 		}
+		else if (command === 'clear') {
+			console.clear();
+		}
 
 	}
 	rl.prompt();

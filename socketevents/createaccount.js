@@ -8,8 +8,8 @@ module.exports = {
 
 		if(!arg.username || !arg.password) return socket.emit('update', { code: 'MISSINGINFO' });
 
-		if(db.has(arg.username)) return socket.emit('update', { code: 'ALREADYEXISTS' });
+		if(await db.has(arg.username) === true) return socket.emit('update', { code: 'ALREADYEXISTS' });
 
-		db.set(arg.username, arg.password);
+		db.set(arg.username, { username: arg.username, password: arg.password });
 	},
 };

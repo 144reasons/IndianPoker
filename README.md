@@ -2,7 +2,9 @@
 
 Just a small project to replicate the gambling game called Indian Poker. I learnt of the existence of this game from the anime adaptation of [Kakegurui - Compulsive gambler](https://en.wikipedia.org/wiki/Kakegurui_%E2%80%93_Compulsive_Gambler)
 
-## Info
+## Various warnings
+
+There is no end-to-end encryption or anything like that. In general, this is a very unsecure project so if you are going to use this for real, make sure to implement proper security protocols. Maybe ill do this one day, probably not. Tale of the story is that this project isnt meant to be secure
 
 Im still finding a way on how to maintain a repo and its docs, please try to assist me if possible!
 
