@@ -13,5 +13,9 @@ module.exports = {
 		if(await db.has(arg.username) === true) return callback({ code: 'ALREADYEXISTS' });
 
 		db.set(arg.username, { username: arg.username, password: arg.password });
+
+		socket.data.account = db.get(arg.username);
+
+		callback({ code: 'OK' });
 	},
 };

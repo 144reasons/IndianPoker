@@ -4,7 +4,7 @@ const utils = require('../utils/utils');
 module.exports = {
 	name: 'creategame',
 	once: false,
-	async execute(db, io, socket, arg) {
+	async execute(db, io, socket, arg, callback) {
 
 		console.log(arg);
 
@@ -26,6 +26,6 @@ module.exports = {
 
 		socket.join(gamecode);
 
-		callback({ code: 'CTOROOM' });
+		callback({ code: 'OK', gamecode: gamecode });
 	},
 };

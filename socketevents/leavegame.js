@@ -2,7 +2,7 @@ const fs = require('fs');
 const utils = require('../utils/utils');
 
 module.exports = {
-	name: 'joingame',
+	name: 'leavegame',
 	once: false,
 	async execute(db, io, socket, arg, callback) {
 		if(!utils.isObject(arg)) return callback({ code: 'WRONGFORMAT' });
@@ -11,7 +11,7 @@ module.exports = {
 
 		if(!arg.id) return callback({ code: 'MISSINGINFO' });
 
-		socket.join(arg.id);
+		socket.leave(arg.id);
 
 		callback({ code: 'OK' });
 	},

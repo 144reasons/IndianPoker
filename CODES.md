@@ -8,3 +8,5 @@
 | LIS | Logged In Succesfully |  
 | LIA | Logged In Already |
 | DOESNTEXIST | The request you made was invalid due to nonexisting values in the db |
+| OK | Confirmation everything worked |
+| NOPERMS | No permission to access this data |

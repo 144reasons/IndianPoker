@@ -18,6 +18,6 @@ module.exports = {
 
 		socket.data.account = aaccount;
 
-		callback({ code: 'LIS' });
+		callback({ code: 'OK' });
 	},
 };
