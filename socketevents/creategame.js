@@ -8,9 +8,9 @@ module.exports = {
 
 		console.log(arg);
 
-		if(!utils.isObject(arg)) return socket.emit('update', { code: 'WRONGFORMAT' });
+		if(!utils.isObject(arg)) return callback({ code: 'WRONGFORMAT' });
 
-		if(!arg.chips || !arg.fee) return socket.emit('update', { code: 'MISSINGINFO' });
+		if(!arg.chips || !arg.fee) return callback({ code: 'MISSINGINFO' });
 
 		const gamecode = utils.pswd(4);
 
@@ -26,6 +26,6 @@ module.exports = {
 
 		socket.join(gamecode);
 
-		socket.emit('update', { code: 'CTOROOM' });
+		callback({ code: 'CTOROOM' });
 	},
 };

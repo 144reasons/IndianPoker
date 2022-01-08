@@ -7,3 +7,4 @@
 | WRONGINFO | Emitted when you submit a wrong field. Usually in loginaccount event if you submit wrong password for specified account | 
 | LIS | Logged In Succesfully |  
 | LIA | Logged In Already |
+| DOESNTEXIST | The request you made was invalid due to nonexisting values in the db |
