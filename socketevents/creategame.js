@@ -18,13 +18,14 @@ module.exports = {
 			chips: arg.chips,
 			fee: arg.fee,
 			gamecode: gamecode,
+			players: [],
 		};
 
 		if(!fs.existsSync(`${__dirname}/../data/`)) fs.mkdirSync(`${__dirname}/../data/`);
 
 		fs.writeFileSync(`${__dirname}/../data/${gamecode}.json`, JSON.stringify(gamedata, null, '\t'), 'utf-8');
 
-		socket.join(gamecode);
+		utils.joinGame(callback, socket, gamecode, socket.data.account.username);
 
 		callback({ code: 'OK', gamecode: gamecode });
 	},

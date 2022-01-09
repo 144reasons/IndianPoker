@@ -11,7 +11,7 @@ module.exports = {
 
 		if(!arg.id) return callback({ code: 'MISSINGINFO' });
 
-		socket.join(arg.id);
+		utils.joinGame(callback, socket, arg.id, socket.data.account.username);
 
 		callback({ code: 'OK' });
 	},

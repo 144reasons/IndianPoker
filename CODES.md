@@ -10,3 +10,4 @@
 | DOESNTEXIST | The request you made was invalid due to nonexisting values in the db |
 | OK | Confirmation everything worked |
 | NOPERMS | No permission to access this data |
+| MAXPL | Max players possible in a lobby (4) |
